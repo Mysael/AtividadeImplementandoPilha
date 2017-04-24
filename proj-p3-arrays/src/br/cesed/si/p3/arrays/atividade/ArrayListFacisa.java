@@ -57,15 +57,18 @@ public class ArrayListFacisa {
 	 * 
 	 * @param obj
 	 */
+	/**
+	 * remoção do bug:
+	 * Removi a condição do if que era desnecessária	
+	 */
 	public void remove(Object obj) {
 
 		int posicaoElemento = findPosition(obj);
-		
-		if(posicaoElemento != -1) {
+		//if(posicaoElemento != -1) {
 			for(int i = posicaoElemento; i < inseridos; i++) {
 				meuArrayInterno[i] = meuArrayInterno[i+1]; 
 			}
-		}
+		//}
 		
 		inseridos--;
 	}
